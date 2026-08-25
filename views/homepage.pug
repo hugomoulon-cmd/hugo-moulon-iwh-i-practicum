@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Video Game Characters
+        p
+            a(href="/update-cobj") Add to this table
+        table
+            thead
+                tr
+                    th Name
+                    th Video Game Name
+                    th Consoles
+                    th Description
+                    th Licence
+            tbody
+                each character in data
+                    tr
+                        td= character.properties.name
+                        td= character.properties.video_game_name
+                        td= character.properties.consoles
+                        td= character.properties.description_du_jeu
+                        td= character.properties.licence

@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Update Custom Object Form
+        p
+            a(href="/") Return to the homepage
+        form(action="/update-cobj" method="POST")
+            label(for="name") Name
+            input(type="text" id="name" name="name" required)
+
+            label(for="video_game_name") Video Game Name
+            input(type="text" id="video_game_name" name="video_game_name")
+
+            label(for="consoles") Consoles
+            input(type="text" id="consoles" name="consoles")
+
+            label(for="description_du_jeu") Description
+            textarea(id="description_du_jeu" name="description_du_jeu")
+
+            label(for="licence") Licence
+            input(type="text" id="licence" name="licence")
+
+            button(type="submit") Submit
